@@ -1,0 +1,10 @@
+C:\C# .Net\ElementaryTasks\Chessboard\Chessboard\bin\Debug\Chessboard.exe.config
+C:\C# .Net\ElementaryTasks\Chessboard\Chessboard\bin\Debug\Chessboard.exe
+C:\C# .Net\ElementaryTasks\Chessboard\Chessboard\bin\Debug\Chessboard.pdb
+C:\C# .Net\ElementaryTasks\Chessboard\Chessboard\obj\Debug\Chessboard.csprojAssemblyReference.cache
+C:\C# .Net\ElementaryTasks\Chessboard\Chessboard\obj\Debug\Chessboard.exe
+C:\C# .Net\ElementaryTasks\Chessboard\Chessboard\obj\Debug\Chessboard.pdb
+C:\C# .Net\ElementaryTasks\Chessboard\Chessboard\bin\Debug\NLog.dll
+C:\C# .Net\ElementaryTasks\Chessboard\Chessboard\bin\Debug\NLog.xml
+C:\C# .Net\ElementaryTasks\Chessboard\Chessboard\obj\Debug\Chessboard.csproj.CopyComplete
+C:\C# .Net\ElementaryTasks\Chessboard\Chessboard\bin\Debug\NLog.config

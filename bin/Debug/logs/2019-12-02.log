@@ -1,0 +1,93 @@
+2019-12-02 11:19:58.5177 INFO --------------------------------------------------
+2019-12-02 11:19:58.5736 TRACE Default in GetUserMode userMode = ()
+2019-12-02 11:20:06.6048 TRACE User enter Height = 10
+2019-12-02 11:20:07.5713 TRACE User enter Width = 10
+2019-12-02 11:20:07.5713 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-02 11:20:07.5713 TRACE Builded
+2019-12-02 11:20:12.2477 TRACE Default in GetUserMode userMode = ()
+2019-12-02 11:20:27.6758 TRACE User set new design for (Set the design for white cells and press enter) - O
+2019-12-02 11:20:29.7814 TRACE User set new design for (Set the design for black cells and press enter) - X
+2019-12-02 11:20:40.2999 TRACE User enter Height = 10
+2019-12-02 11:20:41.9926 TRACE User enter Width = 10
+2019-12-02 11:20:41.9926 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-02 11:20:41.9926 TRACE Builded
+2019-12-02 11:27:08.9275 INFO --------------------------------------------------
+2019-12-02 11:27:09.5384 TRACE Default in GetUserMode userMode = ()
+2019-12-02 11:27:13.2743 TRACE User enter Height = 10
+2019-12-02 11:27:13.7088 TRACE User enter Width = 10
+2019-12-02 11:27:13.7088 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-02 11:27:13.7356 TRACE Builded
+2019-12-02 11:27:16.5255 TRACE User enter Height = 3
+2019-12-02 11:27:16.7990 TRACE User enter Width = 3
+2019-12-02 11:27:16.8076 TRACE Try to build ChessBoard Height = (3); Width = (3)
+2019-12-02 11:27:16.8076 TRACE Builded
+2019-12-02 11:27:18.3962 TRACE Default in GetUserMode userMode = ()
+2019-12-02 11:27:25.0211 TRACE User set new design for (Set the design for white cells and press enter) - X
+2019-12-02 11:27:25.8721 TRACE User set new design for (Set the design for black cells and press enter) - O
+2019-12-02 11:27:29.6046 TRACE User enter Height = 10
+2019-12-02 11:27:30.0928 TRACE User enter Width = 10
+2019-12-02 11:27:30.1016 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-02 11:27:30.1016 TRACE Builded
+2019-12-02 11:29:34.4706 INFO --------------------------------------------------
+2019-12-02 11:29:43.0020 TRACE Default in GetUserMode userMode input = ()
+2019-12-02 11:29:55.3239 TRACE User enter Height = 10
+2019-12-02 11:29:56.5368 TRACE User enter Width = 10
+2019-12-02 11:29:56.5564 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-02 11:29:56.5694 TRACE Builded
+2019-12-02 11:30:04.2328 INFO Exit
+2019-12-02 11:46:19.9951 INFO --------------------------------------------------
+2019-12-02 11:46:22.3304 TRACE User enter Height = 10
+2019-12-02 11:46:23.0303 TRACE User enter Width = 10
+2019-12-02 11:46:23.0384 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-02 11:46:23.0384 TRACE Builded
+2019-12-02 11:46:30.4569 TRACE User set new design for (Set the design for white cells and press enter) - O
+2019-12-02 11:46:31.0289 TRACE User set new design for (Set the design for black cells and press enter) - X
+2019-12-02 11:46:34.0547 TRACE User enter Height = 10
+2019-12-02 11:46:34.5256 TRACE User enter Width = 10
+2019-12-02 11:46:34.5256 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-02 11:46:34.5431 TRACE Builded
+2019-12-02 11:46:40.7041 INFO Exit
+2019-12-02 11:48:23.4701 INFO --------------------------------------------------
+2019-12-02 11:48:24.3574 TRACE Default in GetUserMode userMode input = ()
+2019-12-02 11:48:28.0992 TRACE User enter Height = 9
+2019-12-02 11:48:28.7095 TRACE User enter Width = 10
+2019-12-02 11:48:28.7095 TRACE Try to build ChessBoard Height = (9); Width = (10)
+2019-12-02 11:48:28.7320 TRACE Builded
+2019-12-02 11:48:33.7898 TRACE User enter Height = 18
+2019-12-02 11:48:35.0376 TRACE User enter Width = 10
+2019-12-02 11:48:35.0376 TRACE Try to build ChessBoard Height = (18); Width = (10)
+2019-12-02 11:48:35.0571 TRACE Builded
+2019-12-02 11:48:39.6392 TRACE User enter Height = 2
+2019-12-02 11:48:41.6794 TRACE User enter Width = 90
+2019-12-02 11:48:41.6794 TRACE Try to build ChessBoard Height = (2); Width = (90)
+2019-12-02 11:48:41.6984 TRACE Builded
+2019-12-02 11:48:45.9925 TRACE User enter Height = 1
+2019-12-02 11:48:47.5616 TRACE User enter Width = 90
+2019-12-02 11:48:47.5706 TRACE Try to build ChessBoard Height = (1); Width = (90)
+2019-12-02 11:48:47.5706 TRACE Builded
+2019-12-02 11:48:51.8775 TRACE Default in GetUserMode userMode input = ()
+2019-12-02 11:48:55.5466 INFO Exit
+2019-12-02 13:17:03.6400 INFO --------------------------------------------------
+2019-12-02 13:17:07.9121 TRACE Default in UserMenu                               aaa userMode input = (dfghj)
+2019-12-02 13:17:15.9784 TRACE User enter Height = 10
+2019-12-02 13:17:18.1963 TRACE User enter Width = 18
+2019-12-02 13:17:18.1963 TRACE Try to build ChessBoard Height = (10); Width = (18)
+2019-12-02 13:17:18.2201 TRACE Builded
+2019-12-02 13:17:21.1105 TRACE Default in UserMenu                               aaa userMode input = ()
+2019-12-02 13:17:25.0802 TRACE User enter Height = 3
+2019-12-02 13:17:25.3269 TRACE User enter Width = 3
+2019-12-02 13:17:25.3361 TRACE Try to build ChessBoard Height = (3); Width = (3)
+2019-12-02 13:17:25.3361 TRACE Builded
+2019-12-02 13:17:27.8464 TRACE Default in UserMenu                               aaa userMode input = ()
+2019-12-02 13:17:34.7811 TRACE User set new design for (Set the design for white cells and press enter) - X
+2019-12-02 13:17:35.8928 TRACE User set new design for (Set the design for black cells and press enter) - O
+2019-12-02 13:17:40.0530 TRACE User enter Height = 10
+2019-12-02 13:17:40.6394 TRACE User enter Width = 10
+2019-12-02 13:17:40.6488 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-02 13:17:40.6488 TRACE Builded
+2019-12-02 13:24:55.3558 INFO --------------------------------------------------
+2019-12-02 13:24:55.7889 TRACE Default in UserMenu userMode input = ()
+2019-12-02 13:24:57.8762 TRACE User enter Height = 10
+2019-12-02 13:24:58.2589 TRACE User enter Width = 10
+2019-12-02 13:24:58.2589 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-02 13:24:58.2829 TRACE Builded

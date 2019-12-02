@@ -1,0 +1,115 @@
+2019-12-01 21:09:16.0732 TRACE Default in GetUserMode() userMode = 
+2019-12-01 21:09:21.4620 TRACE Default in GetUserMode() userMode = startttt
+2019-12-01 21:13:40.9421 TRACE Startsttststststts
+2019-12-01 21:13:45.9034 TRACE Startsttststststts
+2019-12-01 21:13:47.3443 TRACE Default in GetUserMode() userMode = sd
+2019-12-01 21:20:31.2308 ERROR  Incorrect Input of Height - 
+2019-12-01 21:21:44.1074 TRACE Default in GetUserMode() userMode = 
+2019-12-01 21:21:52.1233 ERROR  Incorrect Input of Width - wo
+2019-12-01 21:30:22.3255 TRACE Default in GetUserMode() userMode = 10
+2019-12-01 21:30:29.2484 TRACE User enter Height = 10
+2019-12-01 21:30:30.6107 ERROR Incorrect Input of Width - wpp
+2019-12-01 21:30:38.7297 TRACE User enter Width = 10
+2019-12-01 21:30:38.7297 TRACE Try to build ChessBoard Height = 10; Width = 10
+2019-12-01 21:30:38.7486 TRACE Builded
+2019-12-01 21:30:43.3068 INFO Exit
+2019-12-01 21:31:06.7628 INFO Start
+2019-12-01 21:31:08.1673 TRACE Default in GetUserMode() userMode = 
+2019-12-01 21:31:15.2957 TRACE User enter Height = 10
+2019-12-01 21:31:17.7328 ERROR Incorrect Input of Width - so
+2019-12-01 21:31:19.9577 TRACE User enter Width = 10
+2019-12-01 21:31:19.9637 TRACE Try to build ChessBoard Height = 10; Width = 10
+2019-12-01 21:31:19.9637 TRACE Builded
+2019-12-01 21:31:19.9787 INFO Start
+2019-12-01 21:31:21.4961 INFO Exit
+2019-12-01 21:36:40.0484 TRACE Enter
+2019-12-01 21:36:42.8504 TRACE Default in GetUserMode() userMode = ()
+2019-12-01 21:37:09.7031 ERROR Incorrect Input of Height - op
+2019-12-01 21:37:12.3441 TRACE User enter Height = 10
+2019-12-01 21:37:13.8984 TRACE User enter Width = 20
+2019-12-01 21:37:13.8984 TRACE Try to build ChessBoard Height = (10); Width = (20)
+2019-12-01 21:37:13.9184 TRACE Builded
+2019-12-01 21:37:16.0883 TRACE Default in GetUserMode() userMode = ()
+2019-12-01 21:37:17.9982 INFO Exit
+2019-12-01 22:01:28.0590 TRACE Enter
+2019-12-01 22:01:31.4398 TRACE Default in GetUserMode userMode = (10)
+2019-12-01 22:01:35.4538 TRACE User enter Height = 10
+2019-12-01 22:01:35.9946 TRACE User enter Width = 10
+2019-12-01 22:01:35.9946 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-01 22:01:36.0133 TRACE Builded
+2019-12-01 22:01:38.4856 INFO Exit
+2019-12-01 22:08:45.7671 TRACE Enter
+2019-12-01 22:52:59.9055 TRACE Enter
+2019-12-01 22:53:01.7584 TRACE Default in GetUserMode userMode = (10)
+2019-12-01 22:53:05.0044 TRACE User enter Height = 10
+2019-12-01 22:53:06.4840 ERROR Incorrect Input of Width - 99s
+2019-12-01 22:53:07.3251 ERROR Incorrect Input of Width - ss
+2019-12-01 22:53:07.6936 ERROR Incorrect Input of Width - 
+2019-12-01 22:53:08.2517 ERROR Incorrect Input of Width - 
+2019-12-01 22:53:08.2792 ERROR Incorrect Input of Width - 
+2019-12-01 22:53:08.3111 ERROR Incorrect Input of Width - 
+2019-12-01 22:53:08.3461 ERROR Incorrect Input of Width - 
+2019-12-01 22:53:08.3781 ERROR Incorrect Input of Width - 
+2019-12-01 22:53:08.4089 ERROR Incorrect Input of Width - 
+2019-12-01 22:53:08.4414 ERROR Incorrect Input of Width - 
+2019-12-01 22:53:08.4795 ERROR Incorrect Input of Width - 
+2019-12-01 22:53:08.5101 ERROR Incorrect Input of Width - 
+2019-12-01 22:53:09.3045 TRACE User enter Width = 10
+2019-12-01 22:53:09.3045 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-01 22:53:09.3274 TRACE Builded
+2019-12-01 22:53:11.3690 INFO Exit
+2019-12-01 22:54:54.5159 TRACE Enter
+2019-12-01 22:54:58.1321 TRACE User enter Height = 9
+2019-12-01 22:54:59.6077 TRACE User enter Width = 100
+2019-12-01 22:54:59.6276 TRACE Try to build ChessBoard Height = (9); Width = (100)
+2019-12-01 22:54:59.6416 TRACE Builded
+2019-12-01 22:55:12.3571 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:55:13.2175 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:55:13.7992 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:55:14.3570 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:55:14.3901 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:55:14.4217 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:55:14.4550 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:55:14.4862 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:55:14.5153 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:55:14.5461 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:55:14.9703 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:55:20.3533 TRACE User enter Height = 90
+2019-12-01 22:55:21.6361 TRACE User enter Width = 90
+2019-12-01 22:55:21.6461 TRACE Try to build ChessBoard Height = (90); Width = (90)
+2019-12-01 22:55:21.6461 TRACE Builded
+2019-12-01 22:55:28.7771 INFO Exit
+2019-12-01 22:56:17.4376 TRACE Enter
+2019-12-01 22:56:19.2325 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:56:40.8351 TRACE User set new design for Set the design for white cells and press enter - O
+2019-12-01 22:56:43.9276 TRACE User set new design for Set the design for black cells and press enter - X
+2019-12-01 22:56:46.6458 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:56:54.0791 TRACE User enter Height = 10
+2019-12-01 22:56:55.1721 TRACE User enter Width = 10
+2019-12-01 22:56:55.1821 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-01 22:56:55.1951 TRACE Builded
+2019-12-01 22:58:28.0235 TRACE Enter
+2019-12-01 22:58:29.5943 TRACE Default in GetUserMode userMode = ()
+2019-12-01 22:58:39.2322 TRACE User set new design for (Set the design for white cells and press enter) - X
+2019-12-01 22:58:40.4310 TRACE User set new design for (Set the design for black cells and press enter) - O
+2019-12-01 22:58:46.4415 TRACE User enter Height = 10
+2019-12-01 22:58:47.0218 TRACE User enter Width = 10
+2019-12-01 22:58:47.0218 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-01 22:58:47.0468 TRACE Builded
+2019-12-01 22:58:50.0926 INFO Exit
+2019-12-01 23:01:33.1772 INFO --------------------
+2019-12-01 23:01:35.2183 TRACE Default in GetUserMode userMode = ()
+2019-12-01 23:01:38.9136 TRACE Default in GetUserMode userMode = (staert)
+2019-12-01 23:01:45.9482 TRACE User enter Height = 10
+2019-12-01 23:01:46.6019 TRACE User enter Width = 10
+2019-12-01 23:01:46.6019 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-01 23:01:46.6258 TRACE Builded
+2019-12-01 23:01:49.5117 TRACE Default in GetUserMode userMode = ()
+2019-12-01 23:01:51.6005 INFO Exit
+2019-12-01 23:02:28.4370 INFO --------------------------------------------------
+2019-12-01 23:02:30.9297 TRACE Default in GetUserMode userMode = ()
+2019-12-01 23:02:35.2119 TRACE User enter Height = 10
+2019-12-01 23:02:35.6865 TRACE User enter Width = 10
+2019-12-01 23:02:35.6964 TRACE Try to build ChessBoard Height = (10); Width = (10)
+2019-12-01 23:02:35.7104 TRACE Builded
+2019-12-01 23:02:37.4953 INFO Exit
