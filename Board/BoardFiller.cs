@@ -8,34 +8,35 @@ namespace Chessboard
 {
     public class BoardFiller<T>
     {
-        #region PublicMembers
+        #region Public Members
+
         public Grid<T> Board { get; }
 
         public BoardFiller(Grid<T> board, T first, T second)
         {
             Board = board;
+
             this.FillEveryFirst(first);
             this.FillEverySecond(second);
         }
-        
+
         public static bool IsFirst(int line, int column)
         {
-            if ((line % DividerForEven != 0) && (column % DividerForEven == 0))
+            if ((line % DividerForEven != 0) && (column % DividerForEven == 0)
+                || (line % DividerForEven == 0) && (column % DividerForEven != 0))
             {
                 return true;
             }
-            else if ((line % DividerForEven == 0) && (column % DividerForEven != 0))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
+
         #endregion
-        #region PrivateMembers
+
+        #region Private Members
+
         private const int DividerForEven = 2;
+
         private void FillEveryFirst(T cell)
         {
             for (int i = 0; i < Board.Height; i++)
@@ -65,6 +66,7 @@ namespace Chessboard
 
             }
         }
+
         #endregion
     }
 }

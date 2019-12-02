@@ -9,10 +9,12 @@ namespace Chessboard
     class BlackCell : Cell
     {
         #region PublicMembers
+
         public BlackCell() : base(CellType.Black)
         {
                 
         }
+
         #endregion
     }
 }

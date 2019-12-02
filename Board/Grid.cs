@@ -9,16 +9,19 @@ namespace Chessboard
     public class Grid<T>
     {
         #region PrivateMembers
-        private readonly T[,] grid;
+
+        private readonly T[,] _grid;
+
         #endregion
 
         #region PublicMembers
+
         public int Height { get; }
         public int Width { get; }
 
         public Grid(int height, int width)
         {
-            grid = new T[height, width];
+            _grid = new T[height, width];
             Height = height;
             Width = width;
         }
@@ -27,13 +30,14 @@ namespace Chessboard
         {
             get
             {
-                return grid[line, column];
+                return _grid[line, column];
             }
             set
             {
-                grid[line, column] = value;
+                _grid[line, column] = value;
             }
         }
+
         #endregion
     }
 }

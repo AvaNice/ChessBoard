@@ -9,10 +9,12 @@ namespace Chessboard
     class BoardBuilder<T>
     {
         #region PublicMembers
+
         public Grid<T> Build(int height, int width)
         {
             return new Grid<T>(height, width);
         }
+
         #endregion
     }
 }

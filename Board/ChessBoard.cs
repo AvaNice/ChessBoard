@@ -9,35 +9,41 @@ namespace Chessboard
     class ChessBoard<T> : IDrawbleBoard<T> 
     {
         #region PublicMembers
+
         public int Height { get; }
         public int Width { get; }
+
         public ChessBoard(int height, int width, T first, T second)
         {
             Height = height;
             Width = width;
-            board = BuildBoadr(height, width);
-            new BoardFiller<T>(board, first, second);
+            _board = BuildBoadr(height, width);
+            new BoardFiller<T>(_board, first, second);
         }
+
         public T this[int line, int column]
         {
             get
             {
-                return board[line, column];
+                return _board[line, column];
             }
             set
             {
-                board[line, column] = value;
+                _board[line, column] = value;
             }
         }
+
         #endregion
 
         #region PrivateMembers
-        private Grid<T> board;
+
+        private Grid<T> _board;
 
         private static Grid<T> BuildBoadr(int height, int width)
         {
             return new BoardBuilder<T>().Build(height, width);
         }
+
         #endregion
     }
 }
