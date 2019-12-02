@@ -12,9 +12,24 @@ namespace Chessboard
     {
         #region PrivateMembers
         private static Logger logger = LogManager.GetCurrentClassLogger();
+
         private static CellVisualization<string> design = new CellVisualization<string>("*", " ");
-        private static void Main()
+        private static void Main(string[] args)
         {
+            if (args.Length > 1)
+            {
+                try
+                {
+                    int height = Convert.ToInt32(args[0]);
+                    int width = Convert.ToInt32(args[1]);
+                    ChessBoardDrawer<string>.DrawChessBoard(BuildChessBoadr(height, width), design);
+                }
+                catch
+                {
+                    logger.Error($"User try wrong args");
+                }
+            }
+
             logger.Info(new string('-', 50));
 
             UserMenu();
@@ -55,6 +70,16 @@ namespace Chessboard
             width = GetUserParameter(TextMessages.Width);
 
             logger.Trace($"Try to build ChessBoard Height = ({height}); Width = ({width})");
+
+            var board = new ChessBoard<IDrawableCell>(height, width, new BlackCell(), new WhiteCell());
+
+            logger.Trace("Builded");
+
+            return board;
+        }
+        private static ChessBoard<IDrawableCell> BuildChessBoadr(int height, int width)
+        {
+            logger.Trace($"Try to build ChessBoard From Args Height = ({height}); Width = ({width})");
 
             var board = new ChessBoard<IDrawableCell>(height, width, new BlackCell(), new WhiteCell());
 
