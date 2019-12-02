@@ -16,23 +16,28 @@ namespace Chessboard
         private static CellVisualization<string> design = new CellVisualization<string>("*", " ");
         private static void Main(string[] args)
         {
-            if (args.Length > 1)
-            {
-                try
-                {
-                    int height = Convert.ToInt32(args[0]);
-                    int width = Convert.ToInt32(args[1]);
-                    ChessBoardDrawer<string>.DrawChessBoard(BuildChessBoadr(height, width), design);
-                }
-                catch
-                {
-                    logger.Error($"User try wrong args");
-                }
-            }
-
             logger.Info(new string('-', 50));
 
+            if (args.Length > 1)
+            {
+                StartWithParams(args);
+            }
+
             UserMenu();
+        }
+
+        private static void StartWithParams(string[] args)
+        {
+            try
+            {
+                int height = Convert.ToInt32(args[0]);
+                int width = Convert.ToInt32(args[1]);
+                ChessBoardDrawer<string>.DrawChessBoard(BuildChessBoadr(height, width), design);
+            }
+            catch
+            {
+                logger.Error($"User try wrong args");
+            }
         }
 
         private static void UserMenu()
@@ -69,13 +74,7 @@ namespace Chessboard
             height = GetUserParameter(TextMessages.Heigth);
             width = GetUserParameter(TextMessages.Width);
 
-            logger.Trace($"Try to build ChessBoard Height = ({height}); Width = ({width})");
-
-            var board = new ChessBoard<IDrawableCell>(height, width, new BlackCell(), new WhiteCell());
-
-            logger.Trace("Builded");
-
-            return board;
+            return BuildChessBoadr(height, width);
         }
         private static ChessBoard<IDrawableCell> BuildChessBoadr(int height, int width)
         {

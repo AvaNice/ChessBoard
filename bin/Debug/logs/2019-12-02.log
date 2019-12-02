@@ -193,3 +193,10 @@
 2019-12-02 15:09:32.5900 TRACE Default in UserMenu userMode input = ()
 2019-12-02 15:09:32.7615 TRACE Default in UserMenu userMode input = ()
 2019-12-02 15:10:45.1539 INFO --------------------------------------------------
+2019-12-02 15:20:48.2781 INFO --------------------------------------------------
+2019-12-02 15:20:48.8717 TRACE Default in UserMenu userMode input = ()
+2019-12-02 15:20:49.3434 TRACE Default in UserMenu userMode input = ()
+2019-12-02 15:20:49.5384 TRACE Default in UserMenu userMode input = ()
+2019-12-02 15:21:09.4081 INFO --------------------------------------------------
+2019-12-02 15:21:09.4381 TRACE Try to build ChessBoard From Args Height = (10); Width = (2)
+2019-12-02 15:21:09.4520 TRACE Builded
