@@ -6,44 +6,17 @@ using System.Threading.Tasks;
 
 namespace Chessboard
 {
-    class ChessBoard<T> : IDrawbleBoard<T> 
+    class ChessBoard : Grid
     {
         #region PublicMembers
 
-        public int Height { get; }
-        public int Width { get; }
-
-        public ChessBoard(int height, int width, T first, T second)
+        public ChessBoard(int height, int width, Cell first, Cell second)
+            :base(height,width)
         {
-            Height = height;
-            Width = width;
-            _board = BuildBoadr(height, width);
-            new BoardFiller<T>(_board, first, second);
-        }
-
-        public T this[int line, int column]
-        {
-            get
-            {
-                return _board[line, column];
-            }
-            set
-            {
-                _board[line, column] = value;
-            }
+            BoardFiller.FillStaggered(this, first, second);
         }
 
         #endregion
 
-        #region PrivateMembers
-
-        private Grid<T> _board;
-
-        private static Grid<T> BuildBoadr(int height, int width)
-        {
-            return new BoardBuilder<T>().Build(height, width);
-        }
-
-        #endregion
     }
 }

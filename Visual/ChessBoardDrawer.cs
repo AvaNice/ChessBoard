@@ -10,7 +10,7 @@ namespace Chessboard
     {
         #region PublicMembers
 
-        public static void DrawChessBoard(IDrawbleBoard<IDrawableCell> grid, ICellVisual<T> visual)
+        public static void DrawChessBoard(IBoard grid, ICellsVisual<T> visual)
         {
             for (int i = 0; i < grid.Height; i++)
             {
@@ -26,15 +26,15 @@ namespace Chessboard
 
         #region PrivateMembers
 
-        private static void DrawCell(IDrawableCell cell, ICellVisual<T> visual)
+        private static void DrawCell(IDrawableCell cell, ICellsVisual<T> visual)
         {
             switch (cell.CellType)
             {
                 case CellType.Black:
-                    Console.Write(visual.Black);
+                    Console.Write(visual.Second);
                     break;
                 case CellType.White:
-                    Console.Write(visual.White);
+                    Console.Write(visual.First);
                     break;
                 default:
                     break;

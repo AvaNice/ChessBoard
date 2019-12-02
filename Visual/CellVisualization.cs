@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Chessboard
 {
-    class CellVisualization<T> : ICellVisual<T>
+    class CellVisualization<T> : ICellsVisual<T>
     {
         #region PublicMembers
 
-        public T White { get; }
+        public T First { get; }
 
-        public T Black { get; }
+        public T Second { get; }
 
         public CellVisualization(T white, T black)
         {
-            White = white;
-            Black = black;
+            First = white;
+            Second = black;
         }
 
         #endregion

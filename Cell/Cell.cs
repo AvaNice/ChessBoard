@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chessboard
 {
-    abstract class Cell : IDrawableCell
+    public abstract class Cell : IDrawableCell
     {
         #region PublicMembers
 

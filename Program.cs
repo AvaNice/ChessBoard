@@ -10,7 +10,6 @@ namespace Chessboard
 {
     class Program
     {
-        #region PrivateMembers
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
         private static CellVisualization<string> design = new CellVisualization<string>("*", " ");
@@ -47,21 +46,21 @@ namespace Chessboard
 
             switch (userMode)
             {
-                case TextMessages.StartMode:
+                case TextMessages.START_MODE:
                     ChessBoardDrawer<string>.DrawChessBoard(BuildChessBoadr(), design);
                     break;
 
-                case TextMessages.ExitMode:
+                case TextMessages.EXIT_MODE:
                     logger.Info("Exit");
                     Process.GetCurrentProcess().Kill();
                     break;
 
-                case TextMessages.SettingsMode:
+                case TextMessages.SETTINGS_MODE:
                     design = GetUserDesign();
                     break;
 
                 default:
-                    Console.WriteLine(TextMessages.Help);
+                    Console.WriteLine(TextMessages.HELP);
                     logger.Trace($"Default in UserMenu userMode input = ({userMode})");
                     break;
             }
@@ -69,22 +68,22 @@ namespace Chessboard
             UserMenu();
         }
 
-        private static ChessBoard<IDrawableCell> BuildChessBoadr()
+        private static ChessBoard BuildChessBoadr()
         {
             int height;
             int width;
 
-            height = GetUserParameter(TextMessages.Heigth);
-            width = GetUserParameter(TextMessages.Width);
+            height = GetUserParameter(TextMessages.HEIGHT);
+            width = GetUserParameter(TextMessages.WIDTH);
 
             return BuildChessBoadr(height, width);
         }
 
-        private static ChessBoard<IDrawableCell> BuildChessBoadr(int height, int width)
+        private static ChessBoard BuildChessBoadr(int height, int width)
         {
             logger.Trace($"Try to build ChessBoard From Args Height = ({height}); Width = ({width})");
 
-            var board = new ChessBoard<IDrawableCell>(height, width, new BlackCell(), new WhiteCell());
+            var board = new ChessBoard(height, width, new BlackCell(), new WhiteCell());
 
             logger.Trace("Builded");
 
@@ -108,15 +107,16 @@ namespace Chessboard
             }
             catch
             {
-                Console.WriteLine(TextMessages.IncorrectInput);
+                Console.WriteLine(TextMessages.INCORRECT_INPUT);
 
                 logger.Error($"Incorrect Input of {parameterName} - {input}");
             }
             return GetUserParameter(parameterName);
         }
+
         private static CellVisualization<string> GetUserDesign()
         {
-            return new CellVisualization<string>(GetCellDesign(TextMessages.DesignWhite), GetCellDesign(TextMessages.DesignBlack));
+            return new CellVisualization<string>(GetCellDesign(TextMessages.DESIGN_WHITE), GetCellDesign(TextMessages.DESIGN_BLACK));
         }
 
         private static string GetCellDesign(string parameterName)
@@ -129,7 +129,5 @@ namespace Chessboard
             logger.Trace($"User set new design for ({parameterName}) - {design}");
             return design;
         }
-
-        #endregion
     }
 }

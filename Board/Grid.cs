@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Chessboard
 {
-    public class Grid<T>
+    public class Grid : IBoard
     {
         #region PrivateMembers
 
-        private readonly T[,] _grid;
+        protected Cell[,] _grid;
 
         #endregion
 
@@ -21,12 +21,12 @@ namespace Chessboard
 
         public Grid(int height, int width)
         {
-            _grid = new T[height, width];
+            _grid = new Cell[height, width];
             Height = height;
             Width = width;
         }
 
-        public T this[int line, int column]
+        public Cell this[int line, int column]
         {
             get
             {

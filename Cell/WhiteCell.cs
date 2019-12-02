@@ -12,7 +12,6 @@ namespace Chessboard
 
         public WhiteCell() : base(CellType.White)
         {
-                
         }
 
         #endregion

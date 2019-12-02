@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Chessboard
 {
-    interface IDrawbleBoard<T>
+    public interface IBoard
     {
         int Height { get; }
 
         int Width { get; }
 
-        T this[int line, int column] { get; set; }
+        Cell this[int line, int column] { get; set; }
     }
 }

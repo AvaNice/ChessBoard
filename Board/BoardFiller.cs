@@ -6,24 +6,22 @@ using System.Threading.Tasks;
 
 namespace Chessboard
 {
-    public class BoardFiller<T>
+    public static class BoardFiller
     {
+        private const int DividerForEven = 2;
+
         #region Public Members
 
-        public Grid<T> Board { get; }
-
-        public BoardFiller(Grid<T> board, T first, T second)
+        public static void FillStaggered(IBoard board, Cell first, Cell second)
         {
-            Board = board;
-
-            this.FillEveryFirst(first);
-            this.FillEverySecond(second);
+            FillEveryFirst(board, first);
+            FillEverySecond(board, second);
         }
 
         public static bool IsFirst(int line, int column)
         {
-            if ((line % DividerForEven != 0) && (column % DividerForEven == 0)
-                || (line % DividerForEven == 0) && (column % DividerForEven != 0))
+            if (((line % DividerForEven != 0) && (column % DividerForEven == 0))
+                || ((line % DividerForEven == 0) && (column % DividerForEven != 0)))
             {
                 return true;
             }
@@ -33,34 +31,32 @@ namespace Chessboard
 
         #endregion
 
-        #region Private Members
+        #region 
 
-        private const int DividerForEven = 2;
-
-        private void FillEveryFirst(T cell)
+        private static void FillEveryFirst(IBoard board, Cell cell)
         {
-            for (int i = 0; i < Board.Height; i++)
+            for (int i = 0; i < board.Height; i++)
             {
-                for (int y = 0; y < Board.Width; y++)
+                for (int y = 0; y < board.Width; y++)
                 {
                     if (IsFirst(i, y))
                     {
-                        Board[i, y] = cell;
+                        board[i, y] = cell;
                     }
                 }
 
             }
         }
 
-        private void FillEverySecond(T cell)
+        private static void FillEverySecond(IBoard board, Cell cell)
         {
-            for (int i = 0; i < Board.Height; i++)
+            for (int i = 0; i < board.Height; i++)
             {
-                for (int y = 0; y < Board.Width; y++)
+                for (int y = 0; y < board.Width; y++)
                 {
                     if (!IsFirst(i, y))
                     {
-                        Board[i, y] = cell;
+                        board[i, y] = cell;
                     }
                 }
 

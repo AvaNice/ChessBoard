@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chessboard
 {
-    enum CellType
+    public enum CellType
     {
         Black,
         White
