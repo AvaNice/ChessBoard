@@ -8,13 +8,7 @@ namespace Chessboard
 {
     public class Grid <T> 
     {
-        #region PrivateMembers
-
         protected T[,] _grid;
-
-        #endregion
-
-        #region PublicMembers
 
         public int Height { get; }
         public int Width { get; }
@@ -37,7 +31,5 @@ namespace Chessboard
                 _grid[line, column] = value;
             }
         }
-
-        #endregion
     }
 }

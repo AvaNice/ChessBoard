@@ -10,8 +10,6 @@ namespace Chessboard
     {
         private const int DividerForEven = 2;
 
-        #region Public Members
-
         public static void FillStaggered(IBoard board, Cell first, Cell second)
         {
             FillEveryFirst(board, first);
@@ -28,10 +26,6 @@ namespace Chessboard
 
             return false;
         }
-
-        #endregion
-
-        #region 
 
         private static void FillEveryFirst(IBoard board, Cell cell)
         {
@@ -59,10 +53,7 @@ namespace Chessboard
                         board[i, y] = cell;
                     }
                 }
-
             }
         }
-
-        #endregion
     }
 }

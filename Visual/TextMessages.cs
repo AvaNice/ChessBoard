@@ -8,8 +8,6 @@ namespace Chessboard
 {
     static class TextMessages
     {
-        #region PublicMembers
-
         public const string HEIGHT = "Height";
         public const string WIDTH = "Width";
         public const string HELP = "Exit - to complete the work.\nStart - to get started.\nSettings - to change cell design." +
@@ -20,7 +18,5 @@ namespace Chessboard
         public const string START_MODE = "start";
         public const string EXIT_MODE = "exit";
         public const string SETTINGS_MODE = "settings";
-
-        #endregion
     }
 }

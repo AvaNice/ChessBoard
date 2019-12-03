@@ -8,8 +8,6 @@ namespace Chessboard
 {
     class CellVisualization<T> : ICellsVisual<T>
     {
-        #region PublicMembers
-
         public T First { get; }
 
         public T Second { get; }
@@ -19,7 +17,5 @@ namespace Chessboard
             First = white;
             Second = black;
         }
-
-        #endregion
     }
 }

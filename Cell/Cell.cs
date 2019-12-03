@@ -8,19 +8,11 @@ namespace Chessboard
 {
     public abstract class Cell : IDrawableCell
     {
-        #region PublicMembers
-
         public CellType CellType { get; }
-
-        #endregion
-
-        #region ProtectedMembers
 
         protected Cell(CellType cellType)
         {
             CellType= cellType;
         }
-
-        #endregion
     }
 }

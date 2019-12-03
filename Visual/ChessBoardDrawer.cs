@@ -8,8 +8,6 @@ namespace Chessboard
 {
     static class ChessBoardDrawer<T>
     {
-        #region PublicMembers
-
         public static void DrawChessBoard(IBoard grid, ICellsVisual<T> visual)
         {
             for (int i = 0; i < grid.Height; i++)
@@ -21,10 +19,6 @@ namespace Chessboard
                 Console.Write("\n");
             }
         }
-
-        #endregion
-
-        #region PrivateMembers
 
         private static void DrawCell(IDrawableCell cell, ICellsVisual<T> visual)
         {
@@ -40,7 +34,5 @@ namespace Chessboard
                     break;
             }
         }
-
-        #endregion
     }
 }

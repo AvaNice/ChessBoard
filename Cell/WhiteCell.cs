@@ -8,12 +8,9 @@ namespace Chessboard
 {
     class WhiteCell : Cell
     {
-        #region PublicMembers
-
-        public WhiteCell() : base(CellType.White)
+        public WhiteCell() 
+            : base(CellType.White)
         {
         }
-
-        #endregion
     }
 }

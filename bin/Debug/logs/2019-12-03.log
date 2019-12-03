@@ -11,3 +11,5 @@
 2019-12-03 12:20:24.5402 TRACE User enter Width = 10
 2019-12-03 12:20:24.5402 TRACE Try to build ChessBoard From Args Height = (10); Width = (10)
 2019-12-03 12:20:24.5547 TRACE Builded
+2019-12-03 14:08:51.8868 INFO --------------------------------------------------
+2019-12-03 14:08:51.9336 TRACE Default in UserMenu userMode input = ()
