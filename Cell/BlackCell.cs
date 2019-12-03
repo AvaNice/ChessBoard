@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chessboard
 {
-    class BlackCell : Cell
+    public class BlackCell : Cell
     {
         public BlackCell() 
             : base(CellType.Black)

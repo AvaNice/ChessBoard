@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Chessboard
 {
-    static class ChessBoardDrawer<T>
+    class ChessBoardDrawer<T>
     {
-        public static void DrawChessBoard(IBoard grid, ICellsVisual<T> visual)
+        public void DrawChessBoard(IBoard grid, ICellsVisual<T> visual)
         {
             for (int i = 0; i < grid.Height; i++)
             {
@@ -20,7 +20,7 @@ namespace Chessboard
             }
         }
 
-        private static void DrawCell(IDrawableCell cell, ICellsVisual<T> visual)
+        private void DrawCell(IDrawableCell cell, ICellsVisual<T> visual)
         {
             switch (cell.CellType)
             {

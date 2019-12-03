@@ -53,18 +53,19 @@
   <ItemGroup>
     <Compile Include="Board\IBoard.cs" />
     <Compile Include="Cell\BlackCell.cs" />
-    <Compile Include="Visual\IDrawableCell.cs" />
-    <Compile Include="Visual\CellVisualization.cs" />
+    <Compile Include="ChessBoardApp.cs" />
+    <Compile Include="InputValidator.cs" />
+    <Compile Include="Design\IDrawableCell.cs" />
+    <Compile Include="Design\CellVisualization.cs" />
     <Compile Include="Board\ChessBoard.cs" />
     <Compile Include="Board\Grid.cs" />
-    <Compile Include="Board\BoardFiller.cs" />
     <Compile Include="Cell\Cell.cs" />
     <Compile Include="Cell\CellType.cs" />
-    <Compile Include="Visual\ChessBoardDrawer.cs" />
-    <Compile Include="Visual\ICellsVisual.cs" />
+    <Compile Include="Design\ChessBoardDrawer.cs" />
+    <Compile Include="Design\ICellsVisual.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Visual\TextMessages.cs" />
+    <Compile Include="Design\TextMessages.cs" />
     <Compile Include="Cell\WhiteCell.cs" />
   </ItemGroup>
   <ItemGroup>
