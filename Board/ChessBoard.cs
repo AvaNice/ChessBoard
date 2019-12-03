@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chessboard
 {
-    class ChessBoard : Grid
+    class ChessBoard : Grid <Cell> , IBoard
     {
         #region PublicMembers
 
