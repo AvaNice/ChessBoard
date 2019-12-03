@@ -49,3 +49,21 @@
 2019-12-03 20:13:52.8566 INFO --------------------------------------------------
 2019-12-03 20:20:15.5181 INFO --------------------------------------------------
 2019-12-03 22:22:07.2232 INFO --------------------------------------------------
+2019-12-03 22:55:52.2592 INFO --------------------------------------------------
+2019-12-03 22:55:53.2725 TRACE Default in UserMenu userMode input = ()
+2019-12-03 22:55:57.9253 TRACE Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-03 22:55:57.9333 TRACE Builded
+2019-12-03 22:55:59.2592 TRACE Default in UserMenu userMode input = ()
+2019-12-03 22:56:01.6709 INFO Exit
+2019-12-03 23:00:15.6473 INFO --------------------------------------------------
+2019-12-03 23:00:15.6752 INFO Start without args
+2019-12-03 23:00:16.5633 TRACE Default in UserMenu userMode input = ()
+2019-12-03 23:00:51.0004 INFO --------------------------------------------------
+2019-12-03 23:00:51.0283 INFO Start without args
+2019-12-03 23:01:14.0293 TRACE Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-03 23:01:14.0383 TRACE Builded
+2019-12-03 23:01:31.3603 INFO User set new design for (Set the design for white cells and press enter) - O
+2019-12-03 23:01:33.4870 INFO User set new design for (Set the design for black cells and press enter) - X
+2019-12-03 23:01:38.6672 TRACE Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-03 23:01:38.6781 TRACE Builded
+2019-12-03 23:01:51.9262 TRACE Default in UserMenu userMode input = ()

@@ -10,15 +10,17 @@ namespace Chessboard
 {
     class ChessBoardApp
     {
-        public static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+        private static Logger _logger = LogManager.GetCurrentClassLogger();
 
         private ChessBoard _board;
-        private Validator _inputValidator = new Validator();
+        private UserInput _inputValidator = new UserInput();
         private ChessBoardDrawer<string> _boardDrawer = new ChessBoardDrawer<string>();
         private CellVisualization<string> _design = new CellVisualization<string>("*", " ");
 
         public void Start()
         {
+            Console.WriteLine(TextMessages.HELP);
+
             UserMenu();
         }
 
@@ -36,7 +38,7 @@ namespace Chessboard
 
             catch
             {
-                Program.Logger.Error($"User input wrong args");
+                _logger.Error($"User input wrong args");
             }
 
             UserMenu();
@@ -56,7 +58,7 @@ namespace Chessboard
 
                 case TextMessages.EXIT_MODE:
 
-                    Program.Logger.Info("Exit");
+                    _logger.Info("Exit");
                     Process.GetCurrentProcess().Kill();
 
                     break;
@@ -70,7 +72,7 @@ namespace Chessboard
                 default:
 
                     Console.WriteLine(TextMessages.HELP);
-                    Program.Logger.Trace($"Default in UserMenu userMode input = ({userInput})");
+                    _logger.Trace($"Default in UserMenu userMode input = ({userInput})");
 
                     break;
             }
@@ -91,13 +93,13 @@ namespace Chessboard
 
         private ChessBoard BuildChessBoadr(int height, int width)
         {
-            Program.Logger.Trace($"Try to build ChessBoard From Args Height = ({height}); Width = ({width})");
+            _logger.Trace($"Try to build ChessBoard From Args Height = ({height}); Width = ({width})");
 
             _board = new ChessBoard(height, width);
 
             _board.FillStaggered(new BlackCell(), new WhiteCell());
 
-            Program.Logger.Trace("Builded");
+            _logger.Trace("Builded");
 
             return _board;
         }

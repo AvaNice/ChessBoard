@@ -10,18 +10,22 @@ namespace Chessboard
 {
     class Program
     {
-        public static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+        private static Logger _logger = LogManager.GetCurrentClassLogger();
 
         private static void Main(string[] args)
         {
-            Logger.Info(new string('-', 50));
+            _logger.Info(new string('-', 50));
 
             ChessBoardApp chessBoardApp = new ChessBoardApp();
 
             if (args.Length > 1)
             {
+                _logger.Info("Start with args");
+
                 chessBoardApp.Start(args);
             }
+
+            _logger.Info("Start without args");
 
             chessBoardApp.Start();
         }
