@@ -54,7 +54,7 @@
     <Compile Include="Board\IBoard.cs" />
     <Compile Include="Cell\BlackCell.cs" />
     <Compile Include="ChessBoardApp.cs" />
-    <Compile Include="InputValidator.cs" />
+    <Compile Include="Validator.cs" />
     <Compile Include="Design\IDrawableCell.cs" />
     <Compile Include="Design\CellVisualization.cs" />
     <Compile Include="Board\ChessBoard.cs" />

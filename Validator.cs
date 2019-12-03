@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Chessboard
 {
-    class InputValidator
+    class Validator
     {
         public int GetUserNumeric(string parameterName)
         {

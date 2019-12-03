@@ -13,7 +13,7 @@ namespace Chessboard
         public static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         private ChessBoard _board;
-        private InputValidator _inputValidator = new InputValidator();
+        private Validator _inputValidator = new Validator();
         private ChessBoardDrawer<string> _boardDrawer = new ChessBoardDrawer<string>();
         private CellVisualization<string> _design = new CellVisualization<string>("*", " ");
 
