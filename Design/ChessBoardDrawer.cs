@@ -25,12 +25,19 @@ namespace Chessboard
             switch (cell.CellType)
             {
                 case CellType.Black:
+
                     Console.Write(visual.Second);
+
                     break;
+
                 case CellType.White:
+
                     Console.Write(visual.First);
+
                     break;
+
                 default:
+
                     break;
             }
         }

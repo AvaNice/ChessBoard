@@ -48,16 +48,30 @@ namespace Chessboard
 
                     return parameterValue;
                 }
+
+                CaseIncorrectInput(parameterName, input);
             }
 
-            catch (Exception ex)
+            catch (FormatException ex)
             {
-                Console.WriteLine(TextMessages.INCORRECT_INPUT);
-
-                _logger.Error($"UserInput {ex.Message}");
+                CaseIncorrectInput(ex, parameterName, input);
             }
 
             return GetUserNumeric(parameterName);
+        }
+
+        private void CaseIncorrectInput(Exception ex, string parameterName, string input)
+        {
+            Console.WriteLine(TextMessages.INCORRECT_INPUT);
+
+            _logger.Error($"{ex.Message} input {parameterName} = {input}");
+        }
+
+        private void CaseIncorrectInput(string parameterName, string input)
+        {
+            Console.WriteLine(TextMessages.INCORRECT_INPUT_VALUE);
+
+            _logger.Error($"User input negative value {parameterName} = {input}");
         }
     }
 }

@@ -1,0 +1,25 @@
+2019-12-04 12:05:47.1213 INFO --------------------------------------------------
+2019-12-04 12:05:47.1482 INFO Start without args
+2019-12-04 12:07:36.6441 INFO --------------------------------------------------
+2019-12-04 12:07:36.6671 INFO Start with args
+2019-12-04 12:07:36.6671 TRACE Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-04 12:07:36.6780 TRACE Builded
+2019-12-04 12:07:42.2304 TRACE Default in UserMenu userMode input = ()
+2019-12-04 12:15:11.2284 INFO --------------------------------------------------
+2019-12-04 12:15:11.2593 INFO Start without args
+2019-12-04 12:15:11.4310 TRACE Default in UserMenu userMode input = ()
+2019-12-04 12:15:15.7957 ERROR User incorrect input Width = asd
+2019-12-04 12:15:18.7957 ERROR User incorrect input Width = sad
+2019-12-04 12:15:19.9279 ERROR User incorrect input Width = sad
+2019-12-04 12:18:52.9100 INFO --------------------------------------------------
+2019-12-04 12:18:52.9370 INFO Start without args
+2019-12-04 12:19:43.4485 INFO --------------------------------------------------
+2019-12-04 12:19:43.4784 INFO Start without args
+2019-12-04 12:19:44.9951 TRACE Default in UserMenu userMode input = ()
+2019-12-04 12:19:49.6709 ERROR ¬ходна€ строка имела неверный формат. input Width = asd
+2019-12-04 12:19:53.9514 TRACE Try to build ChessBoard From Args Height = (10); Width = (12)
+2019-12-04 12:19:53.9603 TRACE Builded
+2019-12-04 12:19:56.8801 ERROR ¬ходна€ строка имела неверный формат. input Height = asdasd
+2019-12-04 12:20:05.7104 ERROR User input negative value Height = -10
+2019-12-04 12:20:18.3411 TRACE Try to build ChessBoard From Args Height = (17); Width = (800000)
+2019-12-04 12:20:19.2393 TRACE Builded

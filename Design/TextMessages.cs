@@ -15,6 +15,7 @@ namespace Chessboard
         public const string DESIGN_WHITE = "Set the design for white cells and press enter";
         public const string DESIGN_BLACK = "Set the design for black cells and press enter";
         public const string INCORRECT_INPUT = "Use the numeric value to enter the Height and Width.";
+        public const string INCORRECT_INPUT_VALUE = "Use a positive value";
         public const string START_MODE = "start";
         public const string EXIT_MODE = "exit";
         public const string SETTINGS_MODE = "settings";

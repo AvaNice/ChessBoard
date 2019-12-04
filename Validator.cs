@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chessboard
 {
-    class Validator
+    public class Validator
     {
         public bool IsSide(string input)
         {
@@ -16,19 +16,23 @@ namespace Chessboard
             {
                 inputedSide = Convert.ToDouble(input);
 
-                if (inputedSide < 0)
-                {
-                    throw new FormatException($"Input {inputedSide} < 0");
-                }
-                
-                return true;
+                return IsMoreThanZero(inputedSide);
             }
 
             catch
             {
-
-                throw new InvalidCastException($"{input} is not numeric");
+                throw;
             }
+        }
+
+        public bool IsMoreThanZero(double input)
+        {
+            if (input > 0)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
