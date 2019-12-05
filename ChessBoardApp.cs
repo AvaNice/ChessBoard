@@ -1,10 +1,6 @@
 ﻿using NLog;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Chessboard
 {
@@ -21,7 +17,7 @@ namespace Chessboard
         {
             Console.WriteLine(TextMessages.HELP);
 
-            UserMenu();
+            StartUserMenu();
         }
 
         public void Start(string[] args)
@@ -41,9 +37,9 @@ namespace Chessboard
                 _logger.Error($"User input wrong args");
             }
 
-            UserMenu();
+            StartUserMenu();
         }
-        public void UserMenu()
+        public void StartUserMenu()
         {
             string userInput = Console.ReadLine().ToLower();
 
@@ -77,7 +73,7 @@ namespace Chessboard
                     break;
             }
 
-            UserMenu();
+            StartUserMenu();
         }
 
         private ChessBoard BuildChessBoadr()
@@ -85,8 +81,8 @@ namespace Chessboard
             int height;
             int width;
 
-            height = _inputValidator.GetUserNumeric(TextMessages.HEIGHT);
-            width = _inputValidator.GetUserNumeric(TextMessages.WIDTH);
+            height = _inputValidator.GetUserSide(TextMessages.HEIGHT);
+            width = _inputValidator.GetUserSide(TextMessages.WIDTH);
 
             return BuildChessBoadr(height, width);
         }

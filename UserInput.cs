@@ -1,9 +1,5 @@
 ﻿using NLog;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Chessboard
 {
@@ -31,7 +27,7 @@ namespace Chessboard
             return design;
         }
 
-        public int GetUserNumeric(string parameterName)
+        public int GetUserSide(string parameterName)
         {
             int parameterValue = 0;
             string input = string.Empty;
@@ -51,27 +47,37 @@ namespace Chessboard
 
                 CaseIncorrectInput(parameterName, input);
             }
-
-            catch (FormatException ex)
+            catch (OverflowException exception)
             {
-                CaseIncorrectInput(ex, parameterName, input);
+                CaseIncorrectInput(parameterName, input, exception);
+            }
+            catch (FormatException exception)
+            {
+                CaseIncorrectInput(parameterName, input, exception);
             }
 
-            return GetUserNumeric(parameterName);
+            return GetUserSide(parameterName);
         }
 
-        private void CaseIncorrectInput(Exception ex, string parameterName, string input)
+        private void CaseIncorrectInput(string parameterName, string input, Exception exception = null)
         {
             Console.WriteLine(TextMessages.INCORRECT_INPUT);
 
-            _logger.Error($"{ex.Message} input {parameterName} = {input}");
+            if (exception != null)
+            {
+                _logger.Error($"{exception.Message} input {parameterName} = {input}");
+            }
+            else
+            {
+                _logger.Error($"User input negative value {parameterName} = {input}");
+            }
         }
 
-        private void CaseIncorrectInput(string parameterName, string input)
-        {
-            Console.WriteLine(TextMessages.INCORRECT_INPUT_VALUE);
+        //private void CaseIncorrectInput(string parameterName, string input)
+        //{
+        //    Console.WriteLine(TextMessages.INCORRECT_INPUT_VALUE);
 
-            _logger.Error($"User input negative value {parameterName} = {input}");
-        }
+        //    _logger.Error($"User input negative value {parameterName} = {input}");
+        //}
     }
 }
