@@ -1,9 +1,12 @@
-﻿using System;
+﻿using NLog;
+using System;
 
 namespace Chessboard
 {
-    class ChessBoardDrawer<T>
+    public class ChessBoardDrawer<T>
     {
+        private static Logger _logger = LogManager.GetCurrentClassLogger();
+
         public void DrawChessBoard(IBoard grid, ICellsVisual<T> visual)
         {
             for (int i = 0; i < grid.Height; i++)
@@ -21,19 +24,15 @@ namespace Chessboard
             switch (cell.CellType)
             {
                 case CellType.Black:
-
                     Console.Write(visual.Second);
-
                     break;
 
                 case CellType.White:
-
                     Console.Write(visual.First);
-
                     break;
 
                 default:
-
+                    _logger.Debug($"Default DrawCell {cell.CellType}");
                     break;
             }
         }

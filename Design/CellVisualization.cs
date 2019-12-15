@@ -1,6 +1,6 @@
 ﻿namespace Chessboard
 {
-    class CellVisualization<T> : ICellsVisual<T>
+    public class CellVisualization<T> : ICellsVisual<T>
     {
         public T First { get; }
 

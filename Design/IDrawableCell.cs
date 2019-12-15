@@ -1,6 +1,6 @@
 ﻿namespace Chessboard
 {
-    interface IDrawableCell
+    public interface IDrawableCell
     {
         CellType CellType { get; }
     }

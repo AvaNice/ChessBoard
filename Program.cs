@@ -2,7 +2,7 @@
 
 namespace Chessboard
 {
-    class Program
+    public class Program
     {
         private static Logger _logger = LogManager.GetCurrentClassLogger();
 

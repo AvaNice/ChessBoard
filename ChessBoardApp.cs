@@ -4,12 +4,12 @@ using System.Diagnostics;
 
 namespace Chessboard
 {
-    class ChessBoardApp
+    public class ChessBoardApp
     {
         private static Logger _logger = LogManager.GetCurrentClassLogger();
 
         private ChessBoard _board;
-        private UserInput _inputValidator = new UserInput();
+        private UserInterface _userInterface = new UserInterface();
         private ChessBoardDrawer<string> _boardDrawer = new ChessBoardDrawer<string>();
         private CellVisualization<string> _design = new CellVisualization<string>("*", " ");
 
@@ -46,34 +46,29 @@ namespace Chessboard
             switch (userInput)
             {
                 case TextMessages.START_MODE:
-
                     BuildChessBoadr();
                     _boardDrawer.DrawChessBoard(_board, _design);
-                    
                     break;
 
                 case TextMessages.EXIT_MODE:
-
                     _logger.Info("Exit");
                     Process.GetCurrentProcess().Kill();
-
                     break;
 
                 case TextMessages.SETTINGS_MODE:
-
-                    _design = _inputValidator.GetUserDesign();
-
+                    _design = _userInterface.GetUserDesign();
                     break;
 
                 default:
-
                     Console.WriteLine(TextMessages.HELP);
                     _logger.Trace($"Default in UserMenu userMode input = ({userInput})");
-
                     break;
             }
 
-            StartUserMenu();
+            if (_userInterface.IsOneMore())
+            {
+                StartUserMenu();
+            }
         }
 
         private ChessBoard BuildChessBoadr()
@@ -81,8 +76,8 @@ namespace Chessboard
             int height;
             int width;
 
-            height = _inputValidator.GetUserSide(TextMessages.HEIGHT);
-            width = _inputValidator.GetUserSide(TextMessages.WIDTH);
+            height = _userInterface.GetUserSide(TextMessages.HEIGHT);
+            width = _userInterface.GetUserSide(TextMessages.WIDTH);
 
             return BuildChessBoadr(height, width);
         }

@@ -1,6 +1,6 @@
 ﻿namespace Chessboard
 {
-    interface ICellsVisual <T>
+    public interface ICellsVisual <T>
     {
         T First { get; }
 

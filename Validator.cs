@@ -14,7 +14,6 @@ namespace Chessboard
 
                 return IsMoreThanZero(inputedSide);
             }
-
             catch
             {
                 throw;

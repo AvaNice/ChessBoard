@@ -7,7 +7,6 @@
         public ChessBoard(int height, int width)
             :base(height,width)
         {
-          
         }
 
         public void FillStaggered(Cell first, Cell second)

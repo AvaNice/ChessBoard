@@ -1,6 +1,6 @@
 ﻿namespace Chessboard
 {
-    static class TextMessages
+    public static class TextMessages
     {
         public const string HEIGHT = "Height";
         public const string WIDTH = "Width";
@@ -15,5 +15,11 @@
         public const string START_MODE = "start";
         public const string EXIT_MODE = "exit";
         public const string SETTINGS_MODE = "settings";
+        public const string NEED_MORE = "Yes - one more file. No - to exit.";
+        public const string YES = "y";
+        public const string NO = "n";
+        public const string YES_SECOND = "yes";
+        public const string NO_SECOND = "no";
+        public const string CANT_READ_MODE = "Enter Yes or No";
     }
 }

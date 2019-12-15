@@ -3,7 +3,7 @@ using System;
 
 namespace Chessboard
 {
-    class UserInput
+    public class UserInterface
     {
         private static Logger _logger = LogManager.GetCurrentClassLogger();
 
@@ -59,6 +59,36 @@ namespace Chessboard
             return GetUserSide(parameterName);
         }
 
+        public bool IsOneMore()
+        {
+            string input;
+            bool result;
+
+            Console.WriteLine(TextMessages.NEED_MORE);
+            input = Console.ReadLine();
+
+            switch (input.ToLower())
+            {
+                case TextMessages.YES:
+                case TextMessages.YES_SECOND:
+                    result = true;
+                    break;
+
+                case TextMessages.NO:
+                case TextMessages.NO_SECOND:
+                    result = false;
+                    break;
+
+                default:
+                    Log.Logger.Information($"UI default. User input {input}");
+                    Console.WriteLine(TextMessages.CANT_READ_MODE);
+
+                    return IsOneMore();
+            }
+
+            return result;
+        }
+
         private void CaseIncorrectInput(string parameterName, string input, Exception exception = null)
         {
             Console.WriteLine(TextMessages.INCORRECT_INPUT);
@@ -72,12 +102,5 @@ namespace Chessboard
                 _logger.Error($"User input negative value {parameterName} = {input}");
             }
         }
-
-        //private void CaseIncorrectInput(string parameterName, string input)
-        //{
-        //    Console.WriteLine(TextMessages.INCORRECT_INPUT_VALUE);
-
-        //    _logger.Error($"User input negative value {parameterName} = {input}");
-        //}
     }
 }
