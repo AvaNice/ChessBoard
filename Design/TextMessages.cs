@@ -15,7 +15,7 @@
         public const string START_MODE = "start";
         public const string EXIT_MODE = "exit";
         public const string SETTINGS_MODE = "settings";
-        public const string NEED_MORE = "Yes - one more file. No - to exit.";
+        public const string NEED_MORE = "Yes - to restart. No - to exit.";
         public const string YES = "y";
         public const string NO = "n";
         public const string YES_SECOND = "yes";

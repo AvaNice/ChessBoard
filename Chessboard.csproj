@@ -52,9 +52,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Board\IBoard.cs" />
+    <Compile Include="Board\IChessBoard.cs" />
     <Compile Include="Cell\BlackCell.cs" />
     <Compile Include="ChessBoardApp.cs" />
-    <Compile Include="UserInput.cs" />
+    <Compile Include="Design\IBoardDrawer.cs" />
+    <Compile Include="IUserInterface.cs" />
+    <Compile Include="IValidator.cs" />
+    <Compile Include="RunMode.cs" />
+    <Compile Include="UserInterface.cs" />
     <Compile Include="Design\IDrawableCell.cs" />
     <Compile Include="Design\CellVisualization.cs" />
     <Compile Include="Board\ChessBoard.cs" />

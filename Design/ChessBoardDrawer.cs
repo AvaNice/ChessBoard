@@ -3,7 +3,7 @@ using System;
 
 namespace Chessboard
 {
-    public class ChessBoardDrawer<T>
+    public class BoardDrawer<T> : IBoardDrawer<T>
     {
         private static Logger _logger = LogManager.GetCurrentClassLogger();
 

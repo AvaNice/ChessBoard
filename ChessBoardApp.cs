@@ -8,16 +8,24 @@ namespace Chessboard
     {
         private static Logger _logger = LogManager.GetCurrentClassLogger();
 
-        private ChessBoard _board;
-        private UserInterface _userInterface = new UserInterface();
-        private ChessBoardDrawer<string> _boardDrawer = new ChessBoardDrawer<string>();
-        private CellVisualization<string> _design = new CellVisualization<string>("*", " ");
+        private readonly IUserInterface _userInterface;
+
+        private IChessBoard _board;
+
+        public ChessBoardApp(IUserInterface userInterface)//, BoardDrawer<string>)
+        {
+            _userInterface = userInterface;
+        }
 
         public void Start()
         {
-            Console.WriteLine(TextMessages.HELP);
+            do
+            {
+                Console.WriteLine(TextMessages.HELP);
 
-            StartUserMenu();
+                StartMode();
+            }
+            while (_userInterface.IsOneMore());
         }
 
         public void Start(string[] args)
@@ -29,7 +37,7 @@ namespace Chessboard
 
                 _board = BuildChessBoadr(height, width);
 
-                _boardDrawer.DrawChessBoard(_board, _design);
+                _userInterface.DrawBoard(_board);
             }
 
             catch
@@ -37,41 +45,28 @@ namespace Chessboard
                 _logger.Error($"User input wrong args");
             }
 
-            StartUserMenu();
+            StartMode();
         }
-        public void StartUserMenu()
+
+        public void StartMode()
         {
-            string userInput = Console.ReadLine().ToLower();
+            RunMode runMode =_userInterface.GetUserMode();
 
-            switch (userInput)
+            switch (runMode)
             {
-                case TextMessages.START_MODE:
+                case RunMode.Start:
                     BuildChessBoadr();
-                    _boardDrawer.DrawChessBoard(_board, _design);
-                    break;
-
-                case TextMessages.EXIT_MODE:
-                    _logger.Info("Exit");
-                    Process.GetCurrentProcess().Kill();
-                    break;
-
-                case TextMessages.SETTINGS_MODE:
-                    _design = _userInterface.GetUserDesign();
+                    _userInterface.DrawBoard(_board);
                     break;
 
                 default:
                     Console.WriteLine(TextMessages.HELP);
-                    _logger.Trace($"Default in UserMenu userMode input = ({userInput})");
+                    _logger.Trace($"Default in UserMenu userMode input = ({runMode})");
                     break;
-            }
-
-            if (_userInterface.IsOneMore())
-            {
-                StartUserMenu();
             }
         }
 
-        private ChessBoard BuildChessBoadr()
+        private IChessBoard BuildChessBoadr()
         {
             int height;
             int width;
@@ -82,15 +77,15 @@ namespace Chessboard
             return BuildChessBoadr(height, width);
         }
 
-        private ChessBoard BuildChessBoadr(int height, int width)
+        private IChessBoard BuildChessBoadr(int height, int width)
         {
-            _logger.Trace($"Try to build ChessBoard From Args Height = ({height}); Width = ({width})");
+            _logger.Info($"Try to build ChessBoard From Args Height = ({height}); Width = ({width})");
 
             _board = new ChessBoard(height, width);
 
             _board.FillStaggered(new BlackCell(), new WhiteCell());
 
-            _logger.Trace("Builded");
+            _logger.Info("Builded");
 
             return _board;
         }

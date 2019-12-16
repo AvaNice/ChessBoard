@@ -2,7 +2,7 @@
 
 namespace Chessboard
 {
-    public class Validator
+    public class Validator : IValidator
     {
         public bool IsSide(string input)
         {

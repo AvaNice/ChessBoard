@@ -1,11 +1,11 @@
 ﻿namespace Chessboard
 {
-    public class ChessBoard : Grid <Cell> , IBoard
+    public class ChessBoard : Grid<Cell>, IChessBoard
     {
         private const int DIVIDER_FOR_EVEN = 2;
 
         public ChessBoard(int height, int width)
-            :base(height,width)
+            : base(height, width)
         {
         }
 

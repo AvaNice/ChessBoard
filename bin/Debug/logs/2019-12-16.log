@@ -1,0 +1,34 @@
+2019-12-16 20:27:10.8393 INFO --------------------------------------------------
+2019-12-16 20:27:10.8712 INFO Start without args
+2019-12-16 20:27:16.5278 TRACE Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-16 20:27:16.5278 TRACE Builded
+2019-12-16 20:28:02.5061 INFO --------------------------------------------------
+2019-12-16 20:28:02.5355 INFO Start without args
+2019-12-16 20:28:09.3624 TRACE Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-16 20:28:09.3724 TRACE Builded
+2019-12-16 20:28:20.3942 TRACE Default in UserMenu userMode input = ()
+2019-12-16 20:28:23.3461 INFO UI default. User input start
+2019-12-16 20:28:29.1936 TRACE Default in UserMenu userMode input = (yes)
+2019-12-16 20:28:42.8444 INFO --------------------------------------------------
+2019-12-16 20:28:42.8813 INFO Start without args
+2019-12-16 20:28:45.6067 TRACE Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-16 20:28:45.6067 TRACE Builded
+2019-12-16 20:31:32.3049 INFO --------------------------------------------------
+2019-12-16 20:31:32.3319 INFO Start without args
+2019-12-16 20:31:40.1019 TRACE Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-16 20:31:40.1109 TRACE Builded
+2019-12-16 20:39:52.6980 INFO --------------------------------------------------
+2019-12-16 20:39:52.7260 INFO Start without args
+2019-12-16 20:39:57.9038 TRACE Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-16 20:39:57.9038 TRACE Builded
+2019-12-16 20:40:27.7310 INFO --------------------------------------------------
+2019-12-16 20:40:27.7609 INFO Start without args
+2019-12-16 20:40:29.5810 TRACE Default in UserMenu userMode input = (10)
+2019-12-16 20:40:31.0583 TRACE Default in UserMenu userMode input = (10)
+2019-12-16 20:40:33.7346 TRACE Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-16 20:40:33.7446 TRACE Builded
+2019-12-16 20:42:57.0249 INFO --------------------------------------------------
+2019-12-16 20:42:57.0548 INFO Start without args
+2019-12-16 20:42:59.6050 ERROR User input negative value Height = 0
+2019-12-16 20:43:02.7411 INFO Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-16 20:43:02.7500 INFO Builded

@@ -1,23 +1,33 @@
 ﻿using NLog;
+using NLog.Fluent;
 using System;
 
 namespace Chessboard
 {
-    public class UserInterface
+    public class UserInterface : IUserInterface
     {
         private static Logger _logger = LogManager.GetCurrentClassLogger();
 
-        private Validator _valdator = new Validator();
-        
-        public CellVisualization<string> GetUserDesign()
+        private readonly IBoardDrawer<string> _boardDrawer;
+        private readonly IValidator _valdator;
+
+        private CellVisualization<string> _design = new CellVisualization<string>("*", " ");
+
+        public UserInterface(IBoardDrawer<string> boardDrawer, IValidator validator)
         {
-            return new CellVisualization<string>(GetCellDesign(TextMessages.DESIGN_WHITE)
+            _boardDrawer = boardDrawer;
+            _valdator = validator;
+        }
+
+        public void GetUserDesign()
+        {
+            _design = new CellVisualization<string>(GetCellDesign(TextMessages.DESIGN_WHITE)
                 , GetCellDesign(TextMessages.DESIGN_BLACK));
         }
 
         private string GetCellDesign(string parameterName)
         {
-            string design = string.Empty;
+            string design;
 
             Console.Write($"{parameterName} : ");
             design = Console.ReadLine();
@@ -80,7 +90,7 @@ namespace Chessboard
                     break;
 
                 default:
-                    Log.Logger.Information($"UI default. User input {input}");
+                    _logger.Info($"UI default. User input {input}");
                     Console.WriteLine(TextMessages.CANT_READ_MODE);
 
                     return IsOneMore();
@@ -101,6 +111,37 @@ namespace Chessboard
             {
                 _logger.Error($"User input negative value {parameterName} = {input}");
             }
+        }
+
+        public RunMode GetUserMode()
+        {
+            string userInput = Console.ReadLine().ToLower();
+            RunMode userMode;
+
+            switch (userInput)
+            {
+                case TextMessages.START_MODE:
+                    userMode = RunMode.Start;
+                    return userMode;
+                    
+
+                case TextMessages.SETTINGS_MODE:
+                    GetUserDesign();
+                    break;
+
+                default:
+                    Console.WriteLine(TextMessages.HELP);
+                    _logger.Trace($"Default in UserMenu userMode input = ({userInput})");
+                    break;
+
+            }
+
+            return GetUserMode();
+        }
+
+        public void DrawBoard(IBoard board)
+        {
+            _boardDrawer.DrawChessBoard(board, _design);
         }
     }
 }
