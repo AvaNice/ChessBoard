@@ -1,9 +1,12 @@
-﻿using System;
+﻿using NLog;
+using System;
 
 namespace Chessboard
 {
     public class Validator : IValidator
     {
+        private static Logger _logger = LogManager.GetCurrentClassLogger();
+
         public bool IsSide(string input)
         {
             double inputedSide;
@@ -14,8 +17,16 @@ namespace Chessboard
 
                 return IsMoreThanZero(inputedSide);
             }
-            catch
+            catch (FormatException ex)
             {
+                _logger.Error($"{ex.Message} User input {input}");
+
+                throw;
+            }
+            catch (OverflowException ex)
+            {
+                _logger.Error($"{ex.Message} User input {input}");
+
                 throw;
             }
         }

@@ -1,5 +1,4 @@
 ﻿using NLog;
-using NLog.Fluent;
 using System;
 
 namespace Chessboard
@@ -113,16 +112,18 @@ namespace Chessboard
             }
         }
 
-        public RunMode GetUserMode()
+        public bool NeedStart()
         {
-            string userInput = Console.ReadLine().ToLower();
-            RunMode userMode;
+            bool result;
+            string userInput;
+
+            userInput = Console.ReadLine().ToLower();
 
             switch (userInput)
             {
                 case TextMessages.START_MODE:
-                    userMode = RunMode.Start;
-                    return userMode;
+                    result = true;
+                    return result;
                     
 
                 case TextMessages.SETTINGS_MODE:
@@ -136,7 +137,7 @@ namespace Chessboard
 
             }
 
-            return GetUserMode();
+            return NeedStart();
         }
 
         public void DrawBoard(IBoard board)

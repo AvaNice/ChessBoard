@@ -58,7 +58,6 @@
     <Compile Include="Design\IBoardDrawer.cs" />
     <Compile Include="IUserInterface.cs" />
     <Compile Include="IValidator.cs" />
-    <Compile Include="RunMode.cs" />
     <Compile Include="UserInterface.cs" />
     <Compile Include="Design\IDrawableCell.cs" />
     <Compile Include="Design\CellVisualization.cs" />

@@ -1,6 +1,5 @@
 ﻿using NLog;
 using System;
-using System.Diagnostics;
 
 namespace Chessboard
 {
@@ -39,7 +38,6 @@ namespace Chessboard
 
                 _userInterface.DrawBoard(_board);
             }
-
             catch
             {
                 _logger.Error($"User input wrong args");
@@ -50,19 +48,10 @@ namespace Chessboard
 
         public void StartMode()
         {
-            RunMode runMode =_userInterface.GetUserMode();
-
-            switch (runMode)
+            if(_userInterface.NeedStart())
             {
-                case RunMode.Start:
-                    BuildChessBoadr();
-                    _userInterface.DrawBoard(_board);
-                    break;
-
-                default:
-                    Console.WriteLine(TextMessages.HELP);
-                    _logger.Trace($"Default in UserMenu userMode input = ({runMode})");
-                    break;
+                BuildChessBoadr();
+                _userInterface.DrawBoard(_board);
             }
         }
 

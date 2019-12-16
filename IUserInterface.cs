@@ -4,7 +4,7 @@
     {
         void GetUserDesign();
 
-        RunMode GetUserMode();
+        bool NeedStart();
 
         int GetUserSide(string parameterName);
 
