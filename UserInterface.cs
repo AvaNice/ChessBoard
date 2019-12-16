@@ -8,14 +8,12 @@ namespace Chessboard
         private static Logger _logger = LogManager.GetCurrentClassLogger();
 
         private readonly IBoardDrawer<string> _boardDrawer;
-        private readonly IValidator _valdator;
 
         private CellVisualization<string> _design = new CellVisualization<string>("*", " ");
 
-        public UserInterface(IBoardDrawer<string> boardDrawer, IValidator validator)
+        public UserInterface(IBoardDrawer<string> boardDrawer)
         {
             _boardDrawer = boardDrawer;
-            _valdator = validator;
         }
 
         public void GetUserDesign()
@@ -47,14 +45,9 @@ namespace Chessboard
 
             try
             {
-                if (_valdator.IsSide(input))
-                {
                     parameterValue = Convert.ToInt32(input);
 
                     return parameterValue;
-                }
-
-                CaseIncorrectInput(parameterName, input);
             }
             catch (OverflowException exception)
             {

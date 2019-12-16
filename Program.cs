@@ -10,9 +10,8 @@ namespace Chessboard
         {
             _logger.Info(new string('-', 50));
 
-            var validator = new Validator();
             var boardDrawer = new BoardDrawer<string>();
-            var userInterface = new UserInterface(boardDrawer, validator);
+            var userInterface = new UserInterface(boardDrawer);
             var chessBoardApp = new ChessBoardApp(userInterface);
 
             if (args.Length > 1)
