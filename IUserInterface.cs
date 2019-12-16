@@ -8,7 +8,7 @@
 
         int GetUserSide(string parameterName);
 
-        bool IsOneMore();
+        bool NeedRestart();
 
         void DrawBoard(IBoard board);
     }

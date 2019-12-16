@@ -25,7 +25,7 @@ namespace Chessboard
 
                 StartMode();
             }
-            while (_userInterface.IsOneMore());
+            while (_userInterface.NeedRestart());
         }
 
         public void Start(string[] args)

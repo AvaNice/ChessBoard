@@ -69,7 +69,7 @@ namespace Chessboard
             return GetUserSide(parameterName);
         }
 
-        public bool IsOneMore()
+        public bool NeedRestart()
         {
             string input;
             bool result;
@@ -93,7 +93,7 @@ namespace Chessboard
                     _logger.Info($"UI default. User input {input}");
                     Console.WriteLine(TextMessages.CANT_READ_MODE);
 
-                    return IsOneMore();
+                    return NeedRestart();
             }
 
             return result;

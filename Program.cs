@@ -13,8 +13,7 @@ namespace Chessboard
             var validator = new Validator();
             var boardDrawer = new BoardDrawer<string>();
             var userInterface = new UserInterface(boardDrawer, validator);
-
-            ChessBoardApp chessBoardApp = new ChessBoardApp(userInterface);
+            var chessBoardApp = new ChessBoardApp(userInterface);
 
             if (args.Length > 1)
             {

@@ -32,3 +32,15 @@
 2019-12-16 20:42:59.6050 ERROR User input negative value Height = 0
 2019-12-16 20:43:02.7411 INFO Try to build ChessBoard From Args Height = (10); Width = (10)
 2019-12-16 20:43:02.7500 INFO Builded
+2019-12-16 21:27:48.6611 INFO --------------------------------------------------
+2019-12-16 21:27:48.6980 INFO Start without args
+2019-12-16 21:27:56.8211 INFO Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-16 21:27:56.8211 INFO Builded
+2019-12-16 21:28:07.2303 INFO User set new design for (Set the design for white cells and press enter) - s
+2019-12-16 21:28:07.9256 INFO User set new design for (Set the design for black cells and press enter) - l
+2019-12-16 21:28:13.6992 INFO Try to build ChessBoard From Args Height = (10); Width = (10)
+2019-12-16 21:28:13.6992 INFO Builded
+2019-12-16 21:29:13.8976 INFO --------------------------------------------------
+2019-12-16 21:29:13.9276 INFO Start without args
+2019-12-16 21:30:08.0525 INFO --------------------------------------------------
+2019-12-16 21:30:08.0795 INFO Start without args
